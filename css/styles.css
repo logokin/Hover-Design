@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap');
+
+ 
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+body{
+    background-color: teal;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100Vh;
+    flex-direction: column;
+    border: 6px gold solid;
+} 
+
+h1{
+    margin-bottom: 5rem;
+   color: white;
+}
+
+
+.card{
+   position: relative;
+}
+.multi-button{
+    position: absolute;
+    top: 1.25rem;
+    left: 1.15rem;
+    border-radius: 100%;
+    width: 0;
+    height: 0;
+    transform: translate(-50%,-50%);
+    transition: cubic-bezier(0.25, 0, 0, 1);
+    visibility: hidden;
+
+}
+.show-multi-button{
+    visibility: visible;
+}
+
+button{
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    border: 2px solid purple;
+    box-shadow: 2px 2px 5px black;
+    outline: none;
+    border-radius: 100%;
+    background: greenyellow;
+    color: honeydew;
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+    /* transition: cubic-bezier(0.25, 0, 0, 1); */
+    transition: 0.6s all ease;
+
+}
+
+button:hover{
+    background:white;
+    color: teal;
+}
+/* when you hover the card container it would trigger the .multi-button */
+ 
+ 
+ 
+.fa-heart{
+    top: 3rem;
+    left: -5rem;
+    transition: 0.6s all ease;
+}
+.fa-comment{
+    top: -2.2rem;
+    left: -5.3rem;
+    transition: 0.6s all ease;
+
+}
+.fa-share-alt{
+    top: -4rem;
+    left: -3rem;
+    transition: 0.6s all ease;
+}
+.fa-trash{
+    top: 0.5rem;
+    left: -6rem;
+    transition: 0.6s all ease;
+}
+
+.container{
+    margin-top: 30px;
+    border: 3px gold solid;
+    background: sienna;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    padding: 3rem;
+    border-radius: 50%;
+    box-shadow: 3px 3px 7px rgb(5, 66, 66), -3px -3px 7px rgb(6, 59, 59);
+}
+.container i{
+    width: 100%;
+    color: white;
+}

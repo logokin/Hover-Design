@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obika chibuke / hover</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
+  <body>
+    <h1>HOVER APP</h1>
+
+    <div class="card">
+      <!-- --------------------------BUTTONS----------------- -->
+      <div class="multi-button">
+        <button class="fa fa-heart"></button>
+        <button class="fa fa-comment"></button>
+        <button class="fa fa-share-alt"></button>
+        <button class="fa fa-trash"></button>
+      </div>
+      <!-- -----------------------END OF BUTTONS---------------- -->
+      <div class="container">
+        <i class="fas fa-paper-plane"></i>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+      gsap.fromTo(
+        "h1",
+        {
+          rotate: 750,
+          scale: 0,
+        },
+        { duration: 1, delay: 2, rotate: 0, scale: 1 }
+      );
+      gsap.fromTo(
+        ".container",
+        {
+          duration: 1,
+          opacity: 0,
+          stagger: 5,
+          y: -350,
+          ease: "bounce",
+          width: 40,
+        },
+        {
+          duration: 1.3,
+          opacity: 1,
+          y: 0,
+          stagger: 5,
+          ease: "bounce",
+          width: 100,
+        }
+      );
+
+      gsap.fromTo(
+        ".fa-paper-plane",
+        { duration1: 1, ease: "bounce", delay: 1, x: -50 },
+        { duration: 2, delay: 1, ease: "elastic", x: 0 }
+      );
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
